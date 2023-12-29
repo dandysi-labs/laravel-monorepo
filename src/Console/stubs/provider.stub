@@ -1,0 +1,40 @@
+<?php
+
+namespace {{ namespace }};
+
+use Dandysi\Laravel\Monorepo\MonorepoProvider as BaseMonorepoProvider;
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\Facades\Route;
+
+class MonorepoProvider extends BaseMonorepoProvider
+{
+    protected function registerRoutes(): void
+    {
+
+    }
+
+    protected function registerCommands(): array
+    {
+      return [];
+    }
+
+    protected function registerEventListeners(): array
+    {
+      return [];
+    }
+
+    protected function registerEventSubscribers(): array
+    {
+      return [];
+    }
+
+    protected function registerSchedule(Schedule $schedule): void
+    {
+
+    }
+
+    protected function registerConfig(): array
+    {
+      return [];
+    }
+}

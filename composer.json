@@ -1,0 +1,41 @@
+{
+    "name": "dandysi/laravel-monorepo",
+    "description": "A set of tools to make working with a monorepo of related Laravel microservices easier",
+    "keywords": ["monorepo", "microservices"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Simon Adams"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dandysi\\Laravel\\Monorepo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dandysi\\Laravel\\Monorepo\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.37",
+        "illuminate/console": "^10.37"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.18",
+        "phpunit/phpunit": "^10.5",
+        "friendsofphp/php-cs-fixer": "^3.42",
+        "phpstan/phpstan": "^1.10"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dandysi\\Laravel\\Monorepo\\MonorepoProvider"
+            ]
+        }
+    }
+}
