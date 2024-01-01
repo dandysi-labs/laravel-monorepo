@@ -205,4 +205,4 @@ Simply create a new provider and repeat.
 
 ## License
 
-Open-sourced software licensed under the [MIT license](LICENSE.md).
+Open-sourced software licensed under the [MIT license](LICENSE).
