@@ -1,7 +1,7 @@
 
 # Laravel Monorepo
 
-[![Actions Status](https://github.com/dandysi-labs/laravel-monorepo/actions/workflows/tests/badge.svg)](https://github.com/dandysi-labs/laravel-monorepo/actions)
+[![Actions Status](https://github.com/dandysi-labs/laravel-monorepo/workflows/Tests/badge.svg)](https://github.com/dandysi-labs/laravel-monorepo/actions)
 
 This package allows you to create a monorepo of related Laravel microservices, that share common libraries and backend services/technologies. 
 
