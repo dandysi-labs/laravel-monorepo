@@ -184,19 +184,19 @@ php artisan make:monorepo-test-case Chores/Tests microservices/Chores/Tests Chor
 To use your new microservice, simply update the environment variable MONOREPO_PROVIDER to point to the relevant monorepo provider class:
 
 ```
-MONOREPO_PROVIDER=Chores\MonorepoProvider
+MONOREPO_PROVIDER=Chores\\MonorepoProvider
 ```
 
 To quickly run a command, prefix the command with the env
 
 ```bash
-MONOREPO_PROVIDER=Chores\MonorepoProvider php artisan chores:some_command
+MONOREPO_PROVIDER=Chores\\MonorepoProvider php artisan chores:some_command
 ```
 
 Or serve some routes
 
 ```bash
-MONOREPO_PROVIDER=Chores\MonorepoProvider php artisan serve
+MONOREPO_PROVIDER=Chores\\MonorepoProvider php artisan serve
 ```
 
 ## Additional Providers
