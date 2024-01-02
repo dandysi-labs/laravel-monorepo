@@ -11,6 +11,7 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
+use Exception;
 
 class MonorepoProvider extends ServiceProvider
 {
@@ -71,12 +72,17 @@ class MonorepoProvider extends ServiceProvider
      */
     public static function definedProvider(): string|null
     {
-        // can we use config yet (we might be running from inside a config file)
-        if (!Config::getFacadeRoot() or !Config::has(self::PROVIDER_CONF)) {
-            return env(self::PROVIDER_ENV, null);
+        // config facade might not be resolved yet (running inside config files)
+        // so simply return env value
+        try {
+            if (Config::has(self::PROVIDER_CONF)) {
+                return Config::get(self::PROVIDER_CONF);
+            }
+        } catch(Exception $e) {
+            // do nothing, default to env
         }
 
-        return Config::get(self::PROVIDER_CONF);
+        return env(self::PROVIDER_ENV, null);
     }
 
     public function boot(): void
